@@ -1,0 +1,7 @@
+<div>id:{{post.id}}</div>
+<div>title:{{post.title}}</div>
+<div>body:{{post.body}}</div>
+
+<button (click)="getComment()">Get Comments</button>
+
+<app-comments *ngIf="postId" [postId]="postId"></app-comments>
