@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {PostPageComponent} from "./pages/post-page/post-page.component";
 import {PostDetailsPageComponent} from "./pages/post-details-page/post-details-page.component";
-import {postDetailsResolver} from "../../services/resolves/post-details.resolver";
+import {postDetailsResolver} from "../../services/resolvers/post-details.resolver";
 
 const routes: Routes = [
   {
