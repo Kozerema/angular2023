@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {MainLayoutComponent} from "./layouts/main-layout/main-layout.component";
+import {isAuthGuard} from "./guards/is-auth.guard";
 
 const routes: Routes = [
   {
@@ -11,7 +12,8 @@ const routes: Routes = [
         path: "auth", loadChildren: () => import('./modules/auth/auth.module')
           .then(m => m.AuthModule)
       },
-      {path: "cars", loadChildren: () => import('./modules/cars/cars.module')
+      {
+        path: "cars", canActivate: [isAuthGuard], loadChildren: () => import('./modules/cars/cars.module')
           .then(m => m.CarsModule)
       }
     ]
