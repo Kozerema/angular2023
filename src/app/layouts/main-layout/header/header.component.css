@@ -1,0 +1,20 @@
+.toolbar{
+  justify-content: space-between;
+}
+
+.links{
+  display: flex;
+}
+
+.links div{
+  padding: 0 5px;
+
+}
+
+.links div:hover{
+  cursor: pointer;
+}
+
+.active{
+  color: black;
+}
